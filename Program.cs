@@ -26,6 +26,14 @@ namespace BankSystem_LevelArchitecture
 
                 switch (choice)
                 {
+                    case '1':
+                        Console.Write("Name: ");
+                        string name = Validation.StringNamingValidation("holder name");
+                        Console.Write("Initial Balance: ");
+                        decimal balance = Validation.DecimalValidation("initial balance");
+                        service.CreateAccount(name, balance);
+                        Console.WriteLine("Account created.\n");
+                        break;
                 }
             }
         }
