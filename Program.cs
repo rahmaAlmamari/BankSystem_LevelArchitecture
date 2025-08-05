@@ -33,6 +33,7 @@ namespace BankSystem_LevelArchitecture
                         decimal balance = Validation.DecimalValidation("initial balance");
                         service.CreateAccount(name, balance);
                         Console.WriteLine("Account created.\n");
+                        Additional.HoldScreen();
                         break;
                     case '2':
                         int depositId = Validation.IntValidation("account id");
@@ -42,10 +43,12 @@ namespace BankSystem_LevelArchitecture
                         {
                             service.UpdateAccountBalance(depositId, accountToDeposit.Balance + depositAmount);
                             Console.WriteLine("Deposit successful.\n");
+                            Additional.HoldScreen();
                         }
                         else
                         {
                             Console.WriteLine("Account not found.\n");
+                            Additional.HoldScreen();
                         }
                         break;
                     case '3':
@@ -58,15 +61,18 @@ namespace BankSystem_LevelArchitecture
                             {
                                 service.UpdateAccountBalance(withdrawId, accountToWithdraw.Balance - withdrawAmount);
                                 Console.WriteLine("Withdrawal successful.\n");
+                                Additional.HoldScreen();
                             }
                             else
                             {
                                 Console.WriteLine("Insufficient balance.\n");
+                                Additional.HoldScreen();
                             }
                         }
                         else
                         {
                             Console.WriteLine("Account not found.\n");
+                            Additional.HoldScreen();
                         }
                         break;
                     case '4':
@@ -77,10 +83,12 @@ namespace BankSystem_LevelArchitecture
                             Console.WriteLine($"Account ID: {accountToShow.Id}");
                             Console.WriteLine($"Holder Name: {accountToShow.HolderName}");
                             Console.WriteLine($"Balance: {accountToShow.Balance:C}\n");
+                            Additional.HoldScreen();
                         }
                         else
                         {
                             Console.WriteLine("Account not found.\n");
+                            Additional.HoldScreen();
                         }
                         break;
                     case '0':
@@ -89,6 +97,7 @@ namespace BankSystem_LevelArchitecture
                         return;
                     default:
                         Console.WriteLine("Invalid option. Please try again.\n");
+                        Additional.HoldScreen();
                         break;
                 }
             }
