@@ -14,6 +14,14 @@ namespace BankSystem_LevelArchitecture
             //to create the project menu ...
             while (true)
             {
+                Console.Clear();
+                Console.WriteLine("Welcome to the Bank System");
+                Console.WriteLine("1. Create Account");
+                Console.WriteLine("2. Deposit");
+                Console.WriteLine("3. Withdraw");
+                Console.WriteLine("4. Show Account");
+                Console.WriteLine("0. Exit");
+                Console.Write("Choose option: ");
             }
         }
     }
