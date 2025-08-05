@@ -34,5 +34,17 @@ namespace BankSystem_LevelArchitecture.Repostries
         {
             return GetAllAccounts().FirstOrDefault(a => a.HolderName.Equals(holderName, StringComparison.OrdinalIgnoreCase));
         }
+
+        //to update account holder name ...
+        public void UpdateAccountHolderName(int id, string newHolderName)
+        {
+            var accounts = GetAllAccounts();
+            var account = accounts.FirstOrDefault(a => a.Id == id);
+            if (account != null)
+            {
+                account.HolderName = newHolderName;
+                FileContext.SaveAccounts(accounts);
+            }
+        }
     }
 }
