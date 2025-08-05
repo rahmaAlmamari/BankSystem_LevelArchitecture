@@ -46,5 +46,17 @@ namespace BankSystem_LevelArchitecture.Repostries
                 FileContext.SaveAccounts(accounts);
             }
         }
+
+        //to update account balance ...
+        public void UpdateAccountBalance(int id, decimal newBalance)
+        {
+            var accounts = GetAllAccounts();
+            var account = accounts.FirstOrDefault(a => a.Id == id);
+            if (account != null)
+            {
+                account.Balance = newBalance;
+                FileContext.SaveAccounts(accounts);
+            }
+        }
     }
 }
