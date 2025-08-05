@@ -8,5 +8,8 @@ namespace BankSystem_LevelArchitecture.Models
 {
     class BankAccount
     {
+        public int Id { get; set; }
+        public string HolderName { get; set; }
+        public decimal Balance { get; set; }
     }
 }
