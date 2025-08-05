@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BankSystem_LevelArchitecture.Services
 {
-    class BankService
+    class BankService : IBankService
     {
         //to create a private field for the repository ...
         private readonly IBankAccountRepository _repository;
