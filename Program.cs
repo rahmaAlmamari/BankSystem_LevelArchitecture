@@ -48,6 +48,27 @@ namespace BankSystem_LevelArchitecture
                             Console.WriteLine("Account not found.\n");
                         }
                         break;
+                    case '3':
+                        int withdrawId = Validation.IntValidation("account id");
+                        decimal withdrawAmount = Validation.DecimalValidation("withdraw amount");
+                        var accountToWithdraw = service.GetAccountById(withdrawId);
+                        if (accountToWithdraw != null)
+                        {
+                            if (accountToWithdraw.Balance >= withdrawAmount)
+                            {
+                                service.UpdateAccountBalance(withdrawId, accountToWithdraw.Balance - withdrawAmount);
+                                Console.WriteLine("Withdrawal successful.\n");
+                            }
+                            else
+                            {
+                                Console.WriteLine("Insufficient balance.\n");
+                            }
+                        }
+                        else
+                        {
+                            Console.WriteLine("Account not found.\n");
+                        }
+                        break;
                 }
             }
         }
