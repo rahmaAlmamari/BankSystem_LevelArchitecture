@@ -69,6 +69,20 @@ namespace BankSystem_LevelArchitecture
                             Console.WriteLine("Account not found.\n");
                         }
                         break;
+                    case '4':
+                        int showId = Validation.IntValidation("account id");
+                        var accountToShow = service.GetAccountById(showId);
+                        if (accountToShow != null)
+                        {
+                            Console.WriteLine($"Account ID: {accountToShow.Id}");
+                            Console.WriteLine($"Holder Name: {accountToShow.HolderName}");
+                            Console.WriteLine($"Balance: {accountToShow.Balance:C}\n");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Account not found.\n");
+                        }
+                        break;
                 }
             }
         }
