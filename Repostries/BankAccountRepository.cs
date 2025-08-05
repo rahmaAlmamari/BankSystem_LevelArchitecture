@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BankSystem_LevelArchitecture.Repostries
 {
-    class BankAccountRepository : IBankAccountRepository
+    public class BankAccountRepository : IBankAccountRepository
     {
         //to get all accounts ...
         public List<BankAccount> GetAllAccounts()
