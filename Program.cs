@@ -9,7 +9,7 @@ namespace BankSystem_LevelArchitecture
             //to create a new instance of the repository ...
             IBankAccountRepository repo = new BankAccountRepository();
             //to create a new instance of the service ...
-            //IBankService service = new BankService(repo);
+            IBankService service = new BankService(repo);
         }
     }
 }
