@@ -35,5 +35,10 @@ namespace BankSystem_LevelArchitecture.Services
 
             _repository.AddAccount(account);
         }
+        //to get account by id ...
+        public BankAccount GetAccountById(int id)
+        {
+            return _repository.GetAccountById(id);
+        }
     }
 }
