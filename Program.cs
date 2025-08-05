@@ -87,6 +87,9 @@ namespace BankSystem_LevelArchitecture
                         Console.WriteLine("Exiting the system. Goodbye!");
                         Additional.HoldScreen();
                         return;
+                    default:
+                        Console.WriteLine("Invalid option. Please try again.\n");
+                        break;
                 }
             }
         }
