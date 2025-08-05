@@ -8,5 +8,6 @@ namespace BankSystem_LevelArchitecture
 {
     class FileContext
     {
+        private static string filePath = "accounts.json";
     }
 }
