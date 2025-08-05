@@ -34,6 +34,20 @@ namespace BankSystem_LevelArchitecture
                         service.CreateAccount(name, balance);
                         Console.WriteLine("Account created.\n");
                         break;
+                    case '2':
+                        int depositId = Validation.IntValidation("account id");
+                        decimal depositAmount = Validation.DecimalValidation("deposit amount");
+                        var accountToDeposit = service.GetAccountById(depositId);
+                        if (accountToDeposit != null)
+                        {
+                            service.UpdateAccountBalance(depositId, accountToDeposit.Balance + depositAmount);
+                            Console.WriteLine("Deposit successful.\n");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Account not found.\n");
+                        }
+                        break;
                 }
             }
         }
