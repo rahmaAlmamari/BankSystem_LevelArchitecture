@@ -70,5 +70,17 @@ namespace BankSystem_LevelArchitecture.Repostries
                 FileContext.SaveAccounts(accounts);
             }
         }
+
+        //to delete account by holder name ...
+        public void DeleteAccountByHolderName(string holderName)
+        {
+            var accounts = GetAllAccounts();
+            var account = accounts.FirstOrDefault(a => a.HolderName.Equals(holderName, StringComparison.OrdinalIgnoreCase));
+            if (account != null)
+            {
+                accounts.Remove(account);
+                FileContext.SaveAccounts(accounts);
+            }
+        }
     }
 }
