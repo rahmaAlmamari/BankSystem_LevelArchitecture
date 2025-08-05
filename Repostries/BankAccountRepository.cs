@@ -24,7 +24,7 @@ namespace BankSystem_LevelArchitecture.Repostries
         }
 
         //to get account by id ...
-        public BankAccount GetAccount(int id)
+        public BankAccount GetAccountById(int id)
         {
             return GetAllAccounts().FirstOrDefault(a => a.Id == id);
         }
