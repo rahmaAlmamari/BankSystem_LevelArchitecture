@@ -1,4 +1,5 @@
-﻿using BankSystem_LevelArchitecture.Repostries;
+﻿using BankSystem_LevelArchitecture.Models;
+using BankSystem_LevelArchitecture.Repostries;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,12 +10,17 @@ namespace BankSystem_LevelArchitecture.Services
 {
     class BankService
     {
-        //to create a private field for the repository
+        //to create a private field for the repository ...
         private readonly IBankAccountRepository _repository;
-        //to create a constructor to initialize the repository
+        //to create a constructor to initialize the repository ...
         public BankService(IBankAccountRepository repository)
         {
             _repository = repository;
+        }
+        //to get all accounts ...
+        public List<BankAccount> GetAllAccounts()
+        {
+            return _repository.GetAllAccounts();
         }
     }
 }
