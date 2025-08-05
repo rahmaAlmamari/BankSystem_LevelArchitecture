@@ -83,6 +83,10 @@ namespace BankSystem_LevelArchitecture
                             Console.WriteLine("Account not found.\n");
                         }
                         break;
+                    case '0':
+                        Console.WriteLine("Exiting the system. Goodbye!");
+                        Additional.HoldScreen();
+                        return;
                 }
             }
         }
