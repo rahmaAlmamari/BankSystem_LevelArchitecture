@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BankSystem_LevelArchitecture.Models
 {
-    class BankAccount
+    public class BankAccount
     {
         public int Id { get; set; }
         public string HolderName { get; set; }
