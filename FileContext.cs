@@ -21,5 +21,11 @@ namespace BankSystem_LevelArchitecture
             var json = File.ReadAllText(filePath);
             return JsonSerializer.Deserialize<List<BankAccount>>(json) ?? new List<BankAccount>();
         }
+        //to save bank accounts to a file
+        public static void SaveAccounts(List<BankAccount> accounts)
+        {
+            var json = JsonSerializer.Serialize(accounts);
+            File.WriteAllText(filePath, json);
+        }
     }
 }
