@@ -22,5 +22,11 @@ namespace BankSystem_LevelArchitecture.Repostries
             accounts.Add(account);
             FileContext.SaveAccounts(accounts);
         }
+
+        //to get account by id ...
+        public BankAccount GetAccount(int id)
+        {
+            return GetAllAccounts().FirstOrDefault(a => a.Id == id);
+        }
     }
 }
