@@ -2,7 +2,7 @@
 
 namespace BankSystem_LevelArchitecture.Repostries
 {
-    internal interface IBankAccountRepository
+    public  interface IBankAccountRepository
     {
         void AddAccount(BankAccount account);
         void DeleteAccount(int id);
