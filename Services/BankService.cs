@@ -59,7 +59,13 @@ namespace BankSystem_LevelArchitecture.Services
         //to delete account by id ...
         public void DeleteAccount(int id)
         {
-                _repository.DeleteAccount(id);
+            _repository.DeleteAccount(id);
+        }
+
+        //to delete account by holder name ...
+        public void DeleteAccountByHolderName(string holderName)
+        {
+            _repository.DeleteAccountByHolderName(holderName);
         }
     }
 }
