@@ -11,5 +11,10 @@ namespace BankSystem_LevelArchitecture.Services
     {
         //to create a private field for the repository
         private readonly IBankAccountRepository _repository;
+        //to create a constructor to initialize the repository
+        public BankService(IBankAccountRepository repository)
+        {
+            _repository = repository;
+        }
     }
 }
