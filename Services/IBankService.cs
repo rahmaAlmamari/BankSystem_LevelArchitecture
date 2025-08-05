@@ -2,7 +2,7 @@
 
 namespace BankSystem_LevelArchitecture.Services
 {
-    internal interface IBankService
+    public interface IBankService
     {
         void CreateAccount(string name, decimal initialBalance);
         void DeleteAccountById(int id);
