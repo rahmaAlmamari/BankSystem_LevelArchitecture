@@ -40,5 +40,10 @@ namespace BankSystem_LevelArchitecture.Services
         {
             return _repository.GetAccountById(id);
         }
+        //to get account by holder name ...
+        public BankAccount GetAccountByHolderName(string holderName)
+        {
+            return _repository.GetAccountByHolderName(holderName);
+        }
     }
 }
