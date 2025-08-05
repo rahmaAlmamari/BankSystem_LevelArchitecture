@@ -28,5 +28,11 @@ namespace BankSystem_LevelArchitecture.Repostries
         {
             return GetAllAccounts().FirstOrDefault(a => a.Id == id);
         }
+
+        //to get account by holder name ...
+        public BankAccount GetAccountByHolderName(string holderName)
+        {
+            return GetAllAccounts().FirstOrDefault(a => a.HolderName.Equals(holderName, StringComparison.OrdinalIgnoreCase));
+        }
     }
 }
