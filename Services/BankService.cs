@@ -55,5 +55,11 @@ namespace BankSystem_LevelArchitecture.Services
         {
             _repository.UpdateAccountBalance(id, newBalance);
         }
+
+        //to delete account by id ...
+        public void DeleteAccount(int id)
+        {
+                _repository.DeleteAccount(id);
+        }
     }
 }
