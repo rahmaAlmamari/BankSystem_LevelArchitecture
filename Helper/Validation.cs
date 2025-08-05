@@ -368,5 +368,31 @@ namespace BankSystem_LevelArchitecture.Helper
             } while (FalgError);
             return value; // Return the valid phone number
         }
+
+        //15. decimalValidation method ...
+        public static decimal DecimalValidation(string message)
+        {
+            bool DecimalFlag;//to handle user StringNaming error input ...
+            decimal DecimalInput = 0;
+            do
+            {
+                DecimalFlag = false;
+                try
+                {
+                    Console.WriteLine($"Enter your {message}:");
+                    DecimalInput = decimal.Parse(Console.ReadLine());
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine($"{message} not accepted due to " + e.Message);
+                    Additional.HoldScreen();//just to hold a second ...
+                    DecimalFlag = true;
+                }
+            } while (DecimalFlag);
+            //to return tne char input ...
+            return DecimalInput;
+        }
+
+
     }
 }
