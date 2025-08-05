@@ -14,5 +14,13 @@ namespace BankSystem_LevelArchitecture.Repostries
         {
             return FileContext.LoadAccounts();
         }
+
+        //to add new account ...
+        public void AddAccount(BankAccount account)
+        {
+            var accounts = GetAllAccounts();
+            accounts.Add(account);
+            FileContext.SaveAccounts(accounts);
+        }
     }
 }
