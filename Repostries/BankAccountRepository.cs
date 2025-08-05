@@ -58,5 +58,17 @@ namespace BankSystem_LevelArchitecture.Repostries
                 FileContext.SaveAccounts(accounts);
             }
         }
+
+        //to delete account by id ...
+        public void DeleteAccount(int id)
+        {
+            var accounts = GetAllAccounts();
+            var account = accounts.FirstOrDefault(a => a.Id == id);
+            if (account != null)
+            {
+                accounts.Remove(account);
+                FileContext.SaveAccounts(accounts);
+            }
+        }
     }
 }
