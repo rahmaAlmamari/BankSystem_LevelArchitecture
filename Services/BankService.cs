@@ -50,5 +50,10 @@ namespace BankSystem_LevelArchitecture.Services
         {
             _repository.UpdateAccountHolderName(id, newHolderName);
         }
+        //to update account balance ...
+        public void UpdateAccountBalance(int id, decimal newBalance)
+        {
+            _repository.UpdateAccountBalance(id, newBalance);
+        }
     }
 }
