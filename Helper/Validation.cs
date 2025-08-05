@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BankSystem_LevelArchitecture.Helper
 {
-    class Validation
+    public static class Validation
     {
     }
 }

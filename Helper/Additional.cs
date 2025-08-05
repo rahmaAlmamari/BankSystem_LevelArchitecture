@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BankSystem_LevelArchitecture.Helper
 {
-    class Additional
+    public static class Additional
     {
     }
 }
