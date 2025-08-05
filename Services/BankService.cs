@@ -45,5 +45,10 @@ namespace BankSystem_LevelArchitecture.Services
         {
             return _repository.GetAccountByHolderName(holderName);
         }
+        //to update account holder name ...
+        public void UpdateAccountHolderName(int id, string newHolderName)
+        {
+            _repository.UpdateAccountHolderName(id, newHolderName);
+        }
     }
 }
