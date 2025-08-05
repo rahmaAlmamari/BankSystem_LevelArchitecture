@@ -1,4 +1,5 @@
-﻿using BankSystem_LevelArchitecture.Repostries;
+﻿using BankSystem_LevelArchitecture.Helper;
+using BankSystem_LevelArchitecture.Repostries;
 using BankSystem_LevelArchitecture.Services;
 
 namespace BankSystem_LevelArchitecture
@@ -21,7 +22,11 @@ namespace BankSystem_LevelArchitecture
                 Console.WriteLine("3. Withdraw");
                 Console.WriteLine("4. Show Account");
                 Console.WriteLine("0. Exit");
-                Console.Write("Choose option: ");
+                char choice = Validation.CharValidation("your option");
+
+                switch (choice)
+                {
+                }
             }
         }
     }
