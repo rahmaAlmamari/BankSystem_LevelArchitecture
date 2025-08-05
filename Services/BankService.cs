@@ -22,5 +22,18 @@ namespace BankSystem_LevelArchitecture.Services
         {
             return _repository.GetAllAccounts();
         }
+        //to add new account ...
+        public void CreateAccount(string name, decimal initialBalance)
+        {
+            var id = _repository.GetAllAccounts().Count + 1;
+            var account = new BankAccount
+            {
+                Id = id,
+                HolderName = name,
+                Balance = initialBalance
+            };
+
+            _repository.AddAccount(account);
+        }
     }
 }
